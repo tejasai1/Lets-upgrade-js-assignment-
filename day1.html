@@ -1,0 +1,30 @@
+<html>
+    <div id="myDiv">
+
+    </div>
+           <script>
+               var myDiv=document.getElementById("myDiv");
+               
+               var date = new Date();
+               console.log(date.getDay() + 1);
+               var dayList=["Saturday","Sunday","Monday","Tuesday","Wednesday","thursday","Friday"];
+               var dayName=dayList[date.getDay() + 1];
+               var hour=date.getHours();
+               var min=date.getMinutes();
+               var sec =date.getSeconds();
+               myDiv.innerText= hour+ ":" +min+ ":" +sec;
+               var mode="AM";
+               if(hour==12)
+               {
+                   mode="PM";
+
+               }
+               else if(hour> 12){
+                   hour=hour-12;
+                   mode="PM"
+               }
+               myDiv.innerText="Today is:" + dayName +"\n"+
+               "Time is"+hour + mode + ":" + min +":" +sec;
+                          </script> 
+        </body>
+    </html>

@@ -1,0 +1,20 @@
+<html>
+    
+        <script type="text/javascript">
+        function getdates()
+        {
+        var _dt=new Date();
+        document.getElementById('lab1dd').innerHTML=[_dt.getDate(),_dt.getMonth(),_dt.getFullYear()].join('/');
+        document.getElementById('lab2dd').innerHTML=[_dt.getDate(),_dt.getMonth(),_dt.getFullYear()].join('-');
+        }
+        </script>
+        <body onload="getdates();">
+       
+        
+            date dd/mm/yyyy format:<label id="lab1dd"></label><br>
+            date dd-mm-yyyy format:<label id="lab2dd"></label>
+      
+      
+        
+    </body>
+</html>
